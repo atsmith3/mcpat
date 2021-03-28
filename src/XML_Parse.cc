@@ -3012,9 +3012,7 @@ void ParseXML::parse(std::string filepath) {
       OrderofComponents_3layer = OrderofComponents_3layer + 1;
     xNode3 = xNode2.getChildNode("component", OrderofComponents_3layer);
     if (xNode3.isEmpty() == 1) {
-      printf("some value(s) of "
-             "number_of_cores/number_of_L2s/number_of_L3s/number_of_NoCs "
-             "is/are not correct!");
+      printf("Number of memory controllers not correct.");
       exit(0);
     }
     if (strstr(xNode3.getAttribute("id"), "system.mc") != NULL) {
@@ -3134,9 +3132,7 @@ void ParseXML::parse(std::string filepath) {
         }
       }
     } else {
-      printf("some value(s) of "
-             "number_of_cores/number_of_L2s/number_of_L3s/number_of_NoCs "
-             "is/are not correct!");
+      printf("Number of memory controllers incorrect.");
       exit(0);
     }
     //__________________________________________Get
@@ -3145,9 +3141,7 @@ void ParseXML::parse(std::string filepath) {
       OrderofComponents_3layer = OrderofComponents_3layer + 1;
     xNode3 = xNode2.getChildNode("component", OrderofComponents_3layer);
     if (xNode3.isEmpty() == 1) {
-      printf("some value(s) of "
-             "number_of_cores/number_of_L2s/number_of_L3s/number_of_NoCs "
-             "is/are not correct!");
+      printf("Number of NIUs incorrect.");
       exit(0);
     }
     if (strstr(xNode3.getAttribute("id"), "system.niu") != NULL) {
@@ -3201,9 +3195,7 @@ void ParseXML::parse(std::string filepath) {
         }
       }
     } else {
-      printf("some value(s) of "
-             "number_of_cores/number_of_L2s/number_of_L3s/number_of_NoCs "
-             "is/are not correct!");
+      printf("Number of NIUs incorrect.");
       exit(0);
     }
 
@@ -3213,9 +3205,7 @@ void ParseXML::parse(std::string filepath) {
       OrderofComponents_3layer = OrderofComponents_3layer + 1;
     xNode3 = xNode2.getChildNode("component", OrderofComponents_3layer);
     if (xNode3.isEmpty() == 1) {
-      printf("some value(s) of "
-             "number_of_cores/number_of_L2s/number_of_L3s/number_of_NoCs "
-             "is/are not correct!");
+      printf("Number of PCIe controller incorrect.");
       exit(0);
     }
     if (strstr(xNode3.getAttribute("id"), "system.pcie") != NULL) {
@@ -3281,9 +3271,7 @@ void ParseXML::parse(std::string filepath) {
         }
       }
     } else {
-      printf("some value(s) of "
-             "number_of_cores/number_of_L2s/number_of_L3s/number_of_NoCs "
-             "is/are not correct!");
+      printf("Number of PCIe controller incorrect.");
       exit(0);
     }
     //__________________________________________Get
@@ -3292,9 +3280,7 @@ void ParseXML::parse(std::string filepath) {
       OrderofComponents_3layer = OrderofComponents_3layer + 1;
     xNode3 = xNode2.getChildNode("component", OrderofComponents_3layer);
     if (xNode3.isEmpty() == 1) {
-      printf("some value(s) of "
-             "number_of_cores/number_of_L2s/number_of_L3s/number_of_NoCs "
-             "is/are not correct!");
+      printf("Number of Flash controllers incorrect.");
       exit(0);
     }
     if (strstr(xNode3.getAttribute("id"), "system.flashc") != NULL) {
@@ -3390,9 +3376,7 @@ void ParseXML::parse(std::string filepath) {
         }
       }
     } else {
-      printf("some value(s) of "
-             "number_of_cores/number_of_L2s/number_of_L3s/number_of_NoCs "
-             "is/are not correct!");
+      printf("Number of flash controllers incorrect.");
       exit(0);
     }
   }

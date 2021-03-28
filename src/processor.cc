@@ -997,7 +997,7 @@ void Processor::displayEnergy(uint32_t indent, int plevel, bool is_tdp) {
         << std::endl;
     if (plevel > 1) {
       for (i = 0; i < numCore; i++) {
-        cores[i].displayEnergy(indent + 4, plevel, is_tdp);
+        cores[i].displayEnergy(indent + 4, plevel, is_tdp, i);
         std::cout
             << "**************************************************************"
                "***************************"

@@ -9,4 +9,4 @@ add_library(memoryctrl
   memoryctrl.cc
 )
 target_include_directories(memoryctrl PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(memoryctrl LINK_PUBLIC cacti top)
+target_link_libraries(memoryctrl PUBLIC cacti top Boost::serialization) 

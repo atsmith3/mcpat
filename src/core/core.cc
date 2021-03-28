@@ -38,8 +38,9 @@
 #include "parameter.h"
 
 #include <algorithm>
-#include <assert.h>
+#include <cassert>
 #include <cmath>
+#include <limits>
 #include <iostream>
 #include <string>
 //#include "globalvar.h"
@@ -399,14 +400,19 @@ void Core::computeDynamicPower(bool is_tdp) {
   }
 }
 
-void Core::displayEnergy(uint32_t indent, int plevel, bool is_tdp) {
+void Core::displayEnergy(uint32_t indent, int plevel, bool is_tdp, int idx) {
   string indent_str(indent, ' ');
   string indent_str_next(indent + 2, ' ');
   bool long_channel = XML->sys.longer_channel_device;
   bool power_gating = XML->sys.power_gating;
 
   if (is_tdp) {
-    cout << "Core:" << endl;
+    if (idx == std::numeric_limits<int>::max()) {
+        cout << "Core:" << endl;
+    }
+    else {
+        cout << "Core" << idx << " :" << endl;
+    }
     cout << indent_str << "Area = " << area.get_area() * 1e-6 << " mm^2"
          << endl;
     cout << indent_str << "Peak Dynamic = " << power.readOp.dynamic * clockRate

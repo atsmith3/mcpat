@@ -314,6 +314,7 @@ void Router::get_router_delay() {
 void Router::get_router_area() {
   area.h = I * buffer.area.h;
   area.w = buffer.area.w + crossbar.area.w;
+  area.set_area(area.h * area.w);
 }
 
 void Router::calc_router_parameters() {

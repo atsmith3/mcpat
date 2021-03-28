@@ -81,7 +81,7 @@ void CacheDynParam::set_params_l3_cache(const ParseXML *XML,
     this->dir_ty = NonDir;
   } else {
     this->dir_ty = SBT;
-    this->dir_duty_cycle = XML->sys.L2[ithCache].dir_duty_cycle;
+    this->dir_duty_cycle = XML->sys.L3[ithCache].dir_duty_cycle;
   }
 }
 
